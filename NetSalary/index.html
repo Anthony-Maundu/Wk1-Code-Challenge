@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Salary Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span class="brand">CODE CHALLENGE</span>
+        </div>
+        <div class="navbar-right">
+            <a href="/index.html">Home</a>
+            <a href="/SpeedDetector/index.html">Speed Calculator</a>
+            <a href="/Grades/index.html">Grade Calculator</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Net Salary Calculator</h1>
+        <label for="basicSalary">Basic Salary:</label>
+        <input type="number" id="basicSalary" placeholder="Enter Basic Salary" inputmode="numeric" required>
+        
+        <label for="benefits">Benefits:</label>
+        <input type="number" id="benefits" placeholder="Enter Benefits" inputmode="numeric" required>
+        
+        <button onclick="calculate()">Calculate Net Salary</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        function calculate() {
+            const basicSalary = parseFloat(document.getElementById('basicSalary').value);
+            const benefits = parseFloat(document.getElementById('benefits').value);
+            if (isNaN(basicSalary) || isNaN(benefits)) {
+                alert("Please enter valid numbers for basic salary and benefits.");
+                return;
+            }
+            const result = calculateNetSalary(basicSalary, benefits);
+            displayResult(result);
+        }
+
+        function displayResult(result) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>Salary Details</h2>
+                <p>Gross Salary: Ksh ${result.grossSalary.toFixed(2)}</p>
+                <p>PAYE (Tax): Ksh ${result.paye.toFixed(2)}</p>
+                <p>Personal Relief: Ksh ${result.personalRelief.toFixed(2)}</p>
+                <p>NHIF Deduction: Ksh ${result.nhifDeduction.toFixed(2)}</p>
+                <p>NSSF Deduction: Ksh ${result.nssfDeduction.toFixed(2)}</p>
+                <p>Housing Levy: Ksh ${result.housingLevy.toFixed(2)}</p>
+                <p><strong>Net Salary: Ksh ${result.netSalary.toFixed(2)}</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
