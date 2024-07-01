@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -7,6 +8,8 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+/* Navigation bar styling */
 .navbar {
     width: 100%;
     background-color: #333;
@@ -40,6 +43,7 @@ body {
     margin-left: 20px;
 }
 
+/* Main content area styling */
 .container {
     background-color: #ffffff;
     padding: 20px;
@@ -49,6 +53,8 @@ body {
     max-width: 400px;
     text-align: center;
 }
+
+/* Input and button styling */
 input {
     width: calc(100% - 20px);
     padding: 10px;
@@ -57,6 +63,7 @@ input {
     border-radius: 5px;
     font-size: 16px;
 }
+
 button {
     padding: 10px;
     margin: 20px 0;
@@ -68,53 +75,21 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #0056b3;
 }
+
+/* Result display styling */
 .result {
     margin-top: 20px;
     text-align: left;
 }
+
 .result h2 {
     margin-bottom: 10px;
 }
+
 .result p {
     margin: 5px 0;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    position: relative; 
-}
-.navbar {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 0 20px; 
-    box-sizing: border-box;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex; 
-    align-items: center; 
-    height: 60px; 
-}
-
-.navbar .brand {
-    font-weight: bold;
-    font-size: 24px;
-    margin-left: 20px;
-}
-
-.navbar-right {
-    margin-left: auto; 
-    display: flex;
-    align-items: center;
-}
-
-.navbar-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
 }

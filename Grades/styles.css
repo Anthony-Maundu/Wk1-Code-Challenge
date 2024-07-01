@@ -4,6 +4,7 @@ body {
     position: relative; 
 }
 
+/* Styling for the grade generation button */
 #Btn {
     margin-left: 900px;
     margin-top: 400px;
@@ -14,6 +15,7 @@ body {
     border-radius: 40px;
 }
 
+/* Styling for the navigation bar */
 .navbar {
     width: 100%;
     background-color: #333;
@@ -29,12 +31,14 @@ body {
     height: 60px; 
 }
 
+/* Styling for the brand name in the navigation bar */
 .navbar .brand {
     font-weight: bold;
     font-size: 24px;
     margin-left: 20px;
 }
 
+/* Styling for navigation links on the right */
 .navbar-right {
     margin-left: auto; 
     display: flex;
@@ -47,6 +51,7 @@ body {
     margin-left: 20px;
 }
 
+/* Styling for the background image */
 .background-image {
     background-image: url('background.jpg');
     background-size: cover;
