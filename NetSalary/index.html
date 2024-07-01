@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="navbar-left">
             <span class="brand">CODE CHALLENGE</span>
@@ -18,21 +19,27 @@
         </div>
     </nav>
 
+    <!-- Main content container -->
     <div class="container">
         <h1>Net Salary Calculator</h1>
+        <!-- Input fields for basic salary and benefits -->
         <label for="basicSalary">Basic Salary:</label>
         <input type="number" id="basicSalary" placeholder="Enter Basic Salary" inputmode="numeric" required>
         
         <label for="benefits">Benefits:</label>
         <input type="number" id="benefits" placeholder="Enter Benefits" inputmode="numeric" required>
         
+        <!-- Button to trigger salary calculation -->
         <button onclick="calculate()">Calculate Net Salary</button>
 
+        <!-- Display area for calculation results -->
         <div class="result" id="result"></div>
     </div>
 
+    <!-- Script files -->
     <script src="index.js"></script>
     <script>
+        // Function to calculate net salary
         function calculate() {
             const basicSalary = parseFloat(document.getElementById('basicSalary').value);
             const benefits = parseFloat(document.getElementById('benefits').value);
@@ -44,6 +51,7 @@
             displayResult(result);
         }
 
+        // Function to display calculation result
         function displayResult(result) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `
